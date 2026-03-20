@@ -1,0 +1,64 @@
+{
+  "expo": {
+    "name": "NovaEscola",
+    "slug": "novaescola-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "codeup",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#17191f"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.codeup.novaescola",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Precisamos da câmera para escanear QR codes e enviar fotos de tarefas.",
+        "NSPhotoLibraryUsageDescription": "Precisamos acessar sua galeria para enviar fotos de tarefas.",
+        "NSMicrophoneUsageDescription": "Precisamos do microfone para gravação de vídeos."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#17191f"
+      },
+      "package": "com.codeup.novaescola",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Precisamos da câmera para escanear QR codes e enviar fotos de tarefas."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Precisamos acessar suas fotos para enviar evidências de tarefas.",
+          "cameraPermission": "Precisamos da câmera para capturar fotos de tarefas."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#ffc105"
+        }
+      ],
+      "expo-asset",
+      "@sentry/react-native"
+    ],
+    "extra": {
+      "supabaseUrl": "https://stszoijrhrblcdqnrqxj.supabase.co",
+      "supabaseKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0c3pvaWpyaHJibGNkcW5ycXhqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ1OTc5MzYsImV4cCI6MjA3MDE3MzkzNn0.j9f1SeUmsETiT7iJrHz3qYcZG71UHbad9y_1DsnoswQ",
+      "sentryDsn": "https://900dbf3def9080685b117543af39637f@o4511054742880256.ingest.us.sentry.io/4511061864808448",
+      "serviceName": "novaescola"
+    }
+  }
+}
